@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+	
+	<http use-expressions="true">
+		<intercept-url pattern="/**" access="hasAnyRole('ROLE_CUSTOMER', 'ROLE_ADMIN')" />
+		<form-login />
+		<logout />
+		<remember-me />
+		<headers>
+			<cache-control/>
+			<xss-protection/>
+		</headers>
+	</http>
+	
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+				<user name="cust1" password="cust1" authorities="ROLE_CUSTOMER" />
+				<user name="cust2" password="cust2" authorities="ROLE_CUSTOMER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+	
+	<global-method-security secured-annotations="enabled" jsr250-annotations="enabled"/>
+</beans:beans>

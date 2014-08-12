@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sample.spring</groupId>
+	<artifactId>sample.spring</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<name>parent project</name>
+
+    <modules>
+		<module>chapter 1/ch01-bankapp-xml</module>
+		<module>chapter 2/ch02-bankapp-scopes</module>
+		<module>chapter 2/ch02-bankapp-interfaces</module>
+		<module>chapter 3/ch03-simple-types-examples</module>
+		<module>chapter 3/ch03-namespaces-example</module>
+		<module>chapter 3/ch03-bankapp-constructor-args-by-name</module>
+		<module>chapter 3/ch03-bankapp-constructor-args-by-type</module>
+		<module>chapter 3/ch03-bankapp-factorybean</module>
+		<module>chapter 3/ch03-bankapp-inheritance</module>
+		<module>chapter 3/ch03-bankapp-inheritance-examples</module>
+		<module>chapter 3/ch03-util-schema-examples</module>
+		<module>chapter 4/ch04-bankapp-autowiring</module>
+		<module>chapter 4/ch04-bankapp-context-aware</module>
+		<module>chapter 4/ch04-bankapp-dependencies</module>
+		<module>chapter 4/ch04-bankapp-lookup-method</module>
+		<module>chapter 4/ch04-bankapp-replaced-method</module>
+		<module>chapter 5/ch05-localoverride-example</module>
+		<module>chapter 5/ch05-propertyOverrideConfigurer-example</module>
+		<module>chapter 5/ch05-property-placeholder-element-example</module>
+		<module>chapter 5/ch05-propertySourcesPlaceholderConfigurer-example</module>
+		<module>chapter 5/ch05-bankapp-beanfactorypostprocessor</module>
+		<module>chapter 5/ch05-bankapp-beanpostprocessor</module>
+		<module>chapter 5/ch05-bankapp-customization</module>
+		<module>chapter 5/ch05-bankapp-jsr250</module>
+		<module>chapter 6/ch06-bankapp-annotations</module>
+		<module>chapter 6/ch06-bankapp-jsr330</module>
+		<module>chapter 6/ch06-value-annotation</module>
+		<module>chapter 6/ch06-spel-example</module>
+		<module>chapter 6/ch06-validator-interface</module>
+		<module>chapter 6/ch06-jsr303-validation</module>
+		<module>chapter 6/ch06-bankapp-configuration</module>
+		<module>chapter 7/ch07-bankapp-jdbc</module>
+		<module>chapter 7/ch07-bankapp-hibernate</module>
+		<module>chapter 7/ch07-bankapp-tx-jdbc</module>
+		<module>chapter 8/ch08-bankapp</module>
+		<module>chapter 9/ch09-simple-aop</module>
+		<module>chapter 9/ch09-aop-proxy</module>
+		<module>chapter 9/ch09-aop-pointcuts</module>
+		<module>chapter 9/ch09-aop-advices</module>
+		<module>chapter 9/ch09-aop-xml-schema</module>
+		<module>chapter 10/ch10-annotation-helloworld</module>
+		<module>chapter 10/ch10-bankapp</module>
+		<module>chapter 10/ch10-helloworld</module>
+		<module>chapter 11/ch11-bankapp</module>
+		<module>chapter 11/ch11-data-binding</module>
+		<module>chapter 11/ch11-jsr303-validation</module>
+		<module>chapter 11/ch11-session-attributes</module>
+		<module>chapter 12/ch12-webservice</module>
+		<module>chapter 12/ch12-webservice-client</module>
+		<module>chapter 12/ch12-webservice-client-uritemplates</module>
+		<module>chapter 12/ch12-webservice-uritemplates</module>
+		<module>chapter 13/ch13-async-bankapp</module>
+		<module>chapter 13/ch13-async-webservice</module>
+		<module>chapter 13/ch13-async-webservice-client</module>
+		<module>chapter 13/ch13-bankapp</module>
+		<module>chapter 13/ch13-commons-file-upload</module>
+		<module>chapter 13/ch13-converter-formatter-bankapp</module>
+		<module>chapter 13/ch13-servlet3-file-upload</module>
+		<module>chapter 14/ch14-bankapp-db-security</module>
+		<module>chapter 14/ch14-bankapp-simple-security</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
